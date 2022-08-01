@@ -1,7 +1,7 @@
 public class PrettyHeader {
     public static void main(String[] args)
     {
-        SafeInput.prettyHeader("STEVOO");
+        SafeInput.prettyHeader("STEVOO0");
     }
 }
 
