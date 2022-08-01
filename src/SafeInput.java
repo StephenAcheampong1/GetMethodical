@@ -205,31 +205,41 @@ public class SafeInput {
     public static void prettyHeader(String msg) {
         int starCount = 60;
 
-        while (starCount != 0)
+        for (int c = 0; c < starCount; c++)
         {
             System.out.print("*");
-            starCount--;
         }
         System.out.println();
         int starsOnTheLeft = (60 - msg.length()) / 2;
-        int left = 1;
-        while (left <= starsOnTheLeft)
+        int spaces = starsOnTheLeft - 3;
+        System.out.print("***");
+
+        for (int c = 0; c < spaces; c++)
         {
-            System.out.print("*");
-            left++;
+            System.out.print(" ");
         }
         System.out.print(msg);
-        int right = 0;
-        while (right <= starsOnTheLeft)
+        if (msg.length() % 2 == 0 )    // test to see if it is even so if this is true then it's even
+        {
+            for (int c = 0; c < spaces; c++)
+            {
+                System.out.print(" ");
+            }
+        }
+        else
+        {
+            for (int c = 0; c <= spaces; c++)
+            {
+                System.out.print(" ");
+            }
+        }
+
+        System.out.println("***");
+
+        for (int c = 0; c < starCount; c++)
         {
             System.out.print("*");
-            right++;
         }
         System.out.println();
-        starCount = 60;
-        while (starCount != 0) {
-            System.out.print("*");
-            starCount--;
-        }
     }
 }
